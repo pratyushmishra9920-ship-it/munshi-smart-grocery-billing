@@ -64,7 +64,7 @@ python -m pip install -r requirements.txt
 
 ### 4. Download the local AI model
 
-Make sure Ollama is installed and running.
+Make sure [Ollama](https://ollama.com/) is installed and running.
 
 ```powershell
 ollama pull qwen3.5:4b
@@ -88,7 +88,7 @@ Run the test suite with:
 python -m pytest tests -v
 ```
 
-**Current test result:** 14 tests passed in the local development environment.
+**Test result:** 14 tests passed in the local development environment during the previous test run.
 
 ---
 
@@ -136,4 +136,3 @@ munshi-smart-grocery-billing/
 ## 📄 License
 
 No license has been specified yet. Add a license before distributing the project under open-source terms.
-
