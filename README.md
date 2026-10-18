@@ -28,16 +28,17 @@ Munshi converts natural-language grocery orders into itemized bills using a loca
 - [Ollama](https://ollama.com/)
 - Git
 
+
 ## 🚀 Setup
 
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd munshi
+git clone https://github.com/pratyushmishra9920-ship-it/munshi-smart-grocery-billing.git
+cd munshi-smart-grocery-billing
 ```
 
-Create and activate a virtual environment.
+### 2. Create a virtual environment
 
 **Windows PowerShell:**
 
@@ -46,29 +47,31 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-Install dependencies:
+### 3. Install dependencies
 
-```bash
+```powershell
 python -m pip install -r requirements.txt
 ```
 
-Download the model:
+### 4. Download the local AI model
 
-```bash
+Make sure [Ollama](https://ollama.com/) is installed, then run:
+
+```powershell
 ollama pull qwen3.5:4b
 ```
 
-Start Ollama, then run the application:
+### 5. Run Munshi
 
-```bash
+```powershell
 python -m streamlit run app.py
 ```
 
-Open `http://localhost:8501` in your browser.
+Open http://localhost:8501 in your browser.
 
 ## 🧪 Run Tests
 
-```bash
+```powershell
 python -m pytest tests -v
 ```
 
