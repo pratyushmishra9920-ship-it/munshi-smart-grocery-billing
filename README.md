@@ -1,17 +1,21 @@
 # 🧾 Munshi — Local AI Grocery Billing
 
-Munshi converts natural-language grocery orders into itemized bills using a locally running AI model.
+Munshi converts natural-language grocery orders into clear, itemized bills using a locally running AI model.
+
+---
 
 ## ✨ Features
 
-- Natural-language grocery order extraction
-- Local AI inference with Ollama and Qwen 3.5 4B
-- Product matching against a CSV price catalog
-- Automatic bill calculation
-- Itemized bill with quantities, rates, and totals
-- Review handling for unmatched products
-- Streamlit web interface
-- Automated tests for billing, catalog, extraction, and order processing
+- 🗣️ Natural-language grocery order extraction
+- 🤖 Local AI inference using Ollama and Qwen 3.5 4B
+- 🛒 Product matching against a CSV price catalog
+- 🧮 Automatic bill calculation
+- 🧾 Itemized bills with quantities, rates, and totals
+- ⚠️ Review handling for unmatched products
+- 🌐 Interactive Streamlit web interface
+- 🧪 Automated tests for billing, catalog, extraction, and order processing
+
+---
 
 ## 🛠️ Tech Stack
 
@@ -22,14 +26,19 @@ Munshi converts natural-language grocery orders into itemized bills using a loca
 - Qwen 3.5 4B
 - Pytest
 
+---
+
 ## 📋 Prerequisites
 
-- Python 3.10+
+Before running Munshi, make sure you have:
+
+- Python 3.10 or newer
 - [Ollama](https://ollama.com/)
 - Git
 
+---
 
-## 🚀 Setup
+## 🚀 Setup and Installation
 
 ### 1. Clone the repository
 
@@ -38,7 +47,7 @@ git clone https://github.com/pratyushmishra9920-ship-it/munshi-smart-grocery-bil
 cd munshi-smart-grocery-billing
 ```
 
-### 2. Create a virtual environment
+### 2. Create and activate a virtual environment
 
 **Windows PowerShell:**
 
@@ -55,53 +64,76 @@ python -m pip install -r requirements.txt
 
 ### 4. Download the local AI model
 
-Make sure [Ollama](https://ollama.com/) is installed, then run:
+Make sure Ollama is installed and running.
 
 ```powershell
 ollama pull qwen3.5:4b
 ```
 
-### 5. Run Munshi
+### 5. Run the application
 
 ```powershell
 python -m streamlit run app.py
 ```
 
-Open http://localhost:8501 in your browser.
+Open [http://localhost:8501](http://localhost:8501) in your browser.
+
+---
 
 ## 🧪 Run Tests
+
+Run the test suite with:
 
 ```powershell
 python -m pytest tests -v
 ```
 
+**Current test result:** 14 tests passed in the local development environment.
+
+---
+
 ## 🔒 Privacy
 
-Order extraction is designed to run through Ollama locally. This project does not require a hosted LLM API for that workflow.
+Munshi is designed to process grocery orders using Ollama locally on your computer. Its order-extraction workflow does not require a hosted LLM API.
 
-## ⚠️ Important
+---
 
-- Product prices are read from the local catalog at `data/pricelist.csv`.
-- Use units that match how products are sold in the catalog.
-- Review the generated bill before accepting payment.
+## ⚠️ Important Notes
+
+- Product prices are loaded from `data/pricelist.csv`.
+- Use quantities and units that match the products in the catalog.
+- Review the generated bill and prices before accepting payment.
+- Ollama and the required Qwen model must be available to process orders.
+
+---
 
 ## 📁 Project Structure
 
 ```text
-munshi/
+munshi-smart-grocery-billing/
 ├── app/
+│   ├── __init__.py
 │   ├── billing.py
 │   ├── catalog.py
 │   ├── extractor.py
-│   └── order_service.py
+│   ├── order_service.py
+│   └── test_ollama.py
 ├── data/
 │   └── pricelist.csv
 ├── tests/
+│   ├── test_billing.py
+│   ├── test_catalog.py
+│   ├── test_extractor.py
+│   └── test_order_service.py
+├── .gitignore
 ├── app.py
 ├── requirements.txt
 └── README.md
 ```
 
+---
+
 ## 📄 License
 
-Add a license before distributing this project publicly.
+No license has been specified yet. Add a license before distributing the project under open-source terms.
+
